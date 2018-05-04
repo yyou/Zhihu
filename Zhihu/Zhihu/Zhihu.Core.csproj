@@ -1,0 +1,101 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <None Remove="Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\BasketViewModel.cs" />
+    <Compile Remove="ViewModels\CampaignDetailsViewModel.cs" />
+    <Compile Remove="ViewModels\CampaignViewModel.cs" />
+    <Compile Remove="ViewModels\CatalogViewModel.cs" />
+    <Compile Remove="ViewModels\CheckoutViewModel.cs" />
+    <Compile Remove="ViewModels\OrderDetailViewModel.cs" />
+    <Compile Remove="ViewModels\ProfileViewModel.cs" />
+    <Compile Remove="ViewModels\SettingsViewModel.cs" />
+    <Compile Remove="Views\BasketView.xaml.cs" />
+    <Compile Remove="Views\CampaignDetailsView.xaml.cs" />
+    <Compile Remove="Views\CampaignView.xaml.cs" />
+    <Compile Remove="Views\CatalogView.xaml.cs" />
+    <Compile Remove="Views\CheckoutView.xaml.cs" />
+    <Compile Remove="Views\FiltersView.xaml.cs" />
+    <Compile Remove="Views\OrderDetailView.xaml.cs" />
+    <Compile Remove="Views\ProfileView.xaml.cs" />
+    <Compile Remove="Views\SettingsView.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\BasketView.xaml" />
+    <EmbeddedResource Remove="Views\CampaignDetailsView.xaml" />
+    <EmbeddedResource Remove="Views\CampaignView.xaml" />
+    <EmbeddedResource Remove="Views\CatalogView.xaml" />
+    <EmbeddedResource Remove="Views\CheckoutView.xaml" />
+    <EmbeddedResource Remove="Views\FiltersView.xaml" />
+    <EmbeddedResource Remove="Views\OrderDetailView.xaml" />
+    <EmbeddedResource Remove="Views\ProfileView.xaml" />
+    <EmbeddedResource Remove="Views\SettingsView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
+    <PackageReference Include="IdentityModel" Version="3.5.0" />
+    <PackageReference Include="PCLCrypto" Version="2.0.147" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ZhihuServiceClient\ZhihuServiceClient.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\IdeasView.xaml.cs">
+      <DependentUpon>IdeasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MarketView.xaml.cs">
+      <DependentUpon>MarketView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MyView.xaml.cs">
+      <DependentUpon>MyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NotificationView.xaml.cs">
+      <DependentUpon>NotificationView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AnswerDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HomeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\IdeasView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MarketView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MyView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NotificationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

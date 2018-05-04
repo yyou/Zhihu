@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Zhihu.Core.Views.MainView"
+            xmlns:views="clr-namespace:Zhihu.Core.Views;assembly=Zhihu.Core"
+			xmlns:viewModelBase="clr-namespace:Zhihu.Core.ViewModels.Base;assembly=Zhihu.Core"
+            xmlns:controls="clr-namespace:Zhihu.Core.Controls;assembly=Zhihu.Core"
+            BarBackgroundColor="{StaticResource DarkGreenColor}"
+            BackgroundColor="{StaticResource BackgroundColor}"
+            BarTextColor="{StaticResource WhiteColor}"
+			viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+    <TabbedPage.Title>
+        <OnPlatform x:TypeArguments="x:String">
+            <On Platform="iOS, UWP, WinRT, WinPhone" Value="Zhihu" />
+        </OnPlatform>
+    </TabbedPage.Title>
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Command="{Binding SettingsCommand}"
+            Text="Settings">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android" Value="app_settings" />
+                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/app_settings.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>-->
+    
+    <!-- HOME -->
+    <views:HomeView  
+        x:Name="HomeView">        
+
+    </views:HomeView>
+    
+    <!-- IDEAS --><!--
+    <views:IdeasView
+        x:Name="IdeasView">
+        
+    </views:IdeasView>
+    
+    --><!-- MARKET --><!--
+    <views:MarketView
+        x:Name="MarketView">
+
+    </views:MarketView>
+    
+    
+    --><!-- NOTIFICATIONS --><!--
+    <views:NotificationView  
+        x:Name="NotificationView">
+        
+    </views:NotificationView>
+
+    --><!--my profile --><!--
+    <views:MyView x:Name="MyView">
+        
+    </views:MyView>-->
+    
+</TabbedPage>

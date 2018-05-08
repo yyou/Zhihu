@@ -32,6 +32,7 @@
             <Color x:Key="AndroidDefaultAccentColorColor">#1FAECE</Color>
             <Color x:Key="AndroidListViewBackgroundColor">Transparent</Color>
             <Color x:Key="iOSListViewBackgroundColor">Transparent</Color>
+            <Color x:Key="ZhihuBlue">#0084FF</Color>
 
             <OnPlatform x:TypeArguments="Color"
                         x:Key="ActivityIndicatorColor">

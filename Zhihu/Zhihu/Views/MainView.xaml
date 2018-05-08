@@ -5,13 +5,12 @@
             xmlns:views="clr-namespace:Zhihu.Core.Views;assembly=Zhihu.Core"
 			xmlns:viewModelBase="clr-namespace:Zhihu.Core.ViewModels.Base;assembly=Zhihu.Core"
             xmlns:controls="clr-namespace:Zhihu.Core.Controls;assembly=Zhihu.Core"
-            BarBackgroundColor="{StaticResource DarkGreenColor}"
+            BarBackgroundColor="{StaticResource WhiteColor}"
             BackgroundColor="{StaticResource BackgroundColor}"
-            BarTextColor="{StaticResource WhiteColor}"
 			viewModelBase:ViewModelLocator.AutoWireViewModel="true">
     <TabbedPage.Title>
         <OnPlatform x:TypeArguments="x:String">
-            <On Platform="iOS, UWP, WinRT, WinPhone" Value="Zhihu" />
+            <On Platform="iOS, UWP, WinRT, WinPhone" Value="" />
         </OnPlatform>
     </TabbedPage.Title>
     <!--<ContentPage.ToolbarItems>
@@ -33,28 +32,28 @@
 
     </views:HomeView>
     
-    <!-- IDEAS --><!--
+    <!-- IDEAS -->
     <views:IdeasView
         x:Name="IdeasView">
         
     </views:IdeasView>
     
-    --><!-- MARKET --><!--
+    <!-- MARKET -->
     <views:MarketView
         x:Name="MarketView">
 
     </views:MarketView>
     
     
-    --><!-- NOTIFICATIONS --><!--
+    <!-- NOTIFICATIONS -->
     <views:NotificationView  
         x:Name="NotificationView">
         
     </views:NotificationView>
 
-    --><!--my profile --><!--
+    <!--my profile -->
     <views:MyView x:Name="MyView">
         
-    </views:MyView>-->
+    </views:MyView>
     
 </TabbedPage>
